@@ -43,7 +43,12 @@ const login = async (req, res) => {
       expiresIn: "1d",
     });
 
-    res.cookie("token", token, { httpOnly: true });
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
+      maxAge: 24 * 60 * 60 * 1000,
+    });
     res.json({ message: "Login successful", user });
   } catch (err) {
     res.status(400).json({ error: err.message });
