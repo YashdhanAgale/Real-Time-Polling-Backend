@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*   # in case you add staging/production env files
+
+# Prisma
+/prisma/migrations/dev.db  # if you use SQLite locally (not in your case, but safe)
+/src/generated/prisma
+
+# Build output (if any in future)
+dist/
