@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 const initializeSocket = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: "http://localhost:5173",
+      origin: "https://real-time-polling-frontend.vercel.app",
       credentials: true,
     },
   });

@@ -6,7 +6,7 @@ const pollRouter = require("./routes/poll");
 require("dotenv").config();
 
 const http = require("http");
-const initializeSocket = require("./utils/socket"); 
+const initializeSocket = require("./utils/socket");
 
 const app = express();
 const PORT = process.env.PORT;
@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://real-time-polling-frontend.vercel.app",
     credentials: true,
   })
 );
